@@ -25,5 +25,3 @@ class Tractor(Vehicle):
 
 tractor = Tractor("red", 4, Engine(), 2)
 tractor.start()
-
-
