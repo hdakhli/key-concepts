@@ -6,14 +6,14 @@ class TestShape(TestCase):
 
     def test_square_area(self):
         # Arrange
-        carre = Square(2)
+        carre = Square(3)
 
         # Act
         area = carre.area()
         fact = carre.fact()
 
         # Assert
-        self.assertEqual(4, area)
+        self.assertEqual(9, area)
         self.assertEqual("Squares have each angle equal to 90 degrees.", fact)
 
     def test_circle_area(self):
