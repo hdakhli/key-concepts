@@ -31,3 +31,14 @@ class Circle(Shape):
 
     def area(self):
         return pi * (self.radius ** 2)
+
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        super().__init__("Rectangle")
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return pi * (self.length * self.width)
+
