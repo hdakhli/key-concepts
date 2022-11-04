@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE personne SYSTEM "personne.dtd">
+<personne>
+    <nom>Doe</nom>
+    <prenom>John</prenom>
+    <telephone>555-123456</telephone>
+    <email>john.doe@email.do</email>
+</personne>

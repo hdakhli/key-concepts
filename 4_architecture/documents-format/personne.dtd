@@ -1,0 +1,5 @@
+<!ELEMENT personne (nom,prenom,telephone),email? >
+        <!ELEMENT nom (#PCDATA) >
+        <!ELEMENT prenom (#PCDATA) >
+        <!ELEMENT telephone (#PCDATA) >
+        <!ELEMENT email (#PCDATA) >
