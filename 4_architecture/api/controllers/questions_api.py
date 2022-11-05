@@ -1,6 +1,9 @@
+import time
+
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
+import requests
 
 app = FastAPI()
 
@@ -23,6 +26,21 @@ def answer(answer: Answer) -> bool:
         f"{answer.user_name} a envoyé la réponse: {answer.answer} "
         f"for question: {answer.question}")
     return True
+
+
+@app.get("/get-a-joke")
+def get_a_joke(user_name: str) -> dict:
+    dog_response = call_api('https://dog.ceo/api/breeds/image/random')
+    user_response = call_api('https://randomuser.me/api/')
+    joke_response = call_api(
+        'https://official-joke-api.appspot.com/random_joke')
+    print(f"{user_name} connecté!")
+    return dict(joke_response, **user_response, **dog_response)
+
+
+def call_api(url):
+    response = requests.get(url)
+    return response.json()
 
 
 if __name__ == "__main__":
