@@ -3,7 +3,7 @@ import sqlite3
 
 class QuizDAO:
     def __init__(self):
-        self.database = '/tmp/quiz.db'
+        self.database = 'quiz.db'
         sql = '''CREATE TABLE QUIZ (id INTEGER PRIMARY KEY,
                                       question_id INT NOT NULL,
                                       user_name text NOT NULL,
@@ -35,4 +35,5 @@ class QuizDAO:
             cur = conn.cursor()
             cur.execute(sql, (question_id,))
             rows = cur.fetchall()
+            print(f"rows: {rows}")
             return len(rows)
