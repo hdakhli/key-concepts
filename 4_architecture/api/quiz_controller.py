@@ -5,16 +5,15 @@ from pydantic import BaseModel
 app = FastAPI()
 
 
+def say_hello(user_name: str) -> str:
+    print(f"{user_name} connecté!")
+    return f"Hello {user_name}"
+
+
 class Quiz(BaseModel):
     user_name: str
     question_id: int
     answer_id: int
-
-
-@app.get("/say-hello")
-def say_hello(user_name: str) -> str:
-    print(f"{user_name} connecté!")
-    return f"Hello {user_name}"
 
 
 @app.post("/send-answer")
