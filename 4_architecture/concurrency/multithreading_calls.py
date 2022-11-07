@@ -3,7 +3,7 @@ import time
 
 
 def call_function(user_name):
-    time.sleep(0.1)
+    time.sleep(0.2)
     print(f"Call from thread user: {user_name}")
 
 
