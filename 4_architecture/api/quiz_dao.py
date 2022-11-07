@@ -1,7 +1,7 @@
 import sqlite3
 
 
-class AnswerDAO:
+class QuizDAO:
     def __init__(self):
         self.database = '/tmp/quiz.db'
         sql = '''CREATE TABLE QUIZ (id INTEGER PRIMARY KEY,
