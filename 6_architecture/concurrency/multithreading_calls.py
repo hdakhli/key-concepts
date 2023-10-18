@@ -4,7 +4,7 @@ import time
 
 def call_function(user_name):
     time.sleep(0.2)
-    print(f"Call from thread user: {user_name}")
+    print(f"Call from thread user: {user_name}\n")
 
 
 if __name__ == '__main__':

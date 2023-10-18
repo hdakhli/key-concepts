@@ -4,19 +4,21 @@ from multiprocessing import Pool
 
 def call_function(user_name):
     time.sleep(0.2)
-    print(f"Call from process user: {user_name}")
+    print(f"Call from process user: {user_name}\n")
 
 
 if __name__ == '__main__':
     start_time = time.time()
+
     users = []
     for user_id in range(1, 15):
         users.append(user_id)
 
-    # for user in users:
-    #     call_function(user)
-    pool = Pool(6)
-    pool.map(call_function, users)
+    for user in users:
+        call_function(user)
+
+    # pool = Pool(15)
+    # pool.map(call_function, users)
 
     end_time = time.time()
     duration = end_time - start_time
