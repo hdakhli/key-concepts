@@ -1,5 +1,4 @@
 import time
-from multiprocessing import Pool
 
 
 def call_function(user_name):
@@ -11,14 +10,11 @@ if __name__ == '__main__':
     start_time = time.time()
 
     users = []
-    for user_id in range(1, 15):
+    for user_id in range(1, 16):
         users.append(user_id)
 
     for user in users:
         call_function(user)
-
-    # pool = Pool(15)
-    # pool.map(call_function, users)
 
     end_time = time.time()
     duration = end_time - start_time
