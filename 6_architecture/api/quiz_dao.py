@@ -44,7 +44,7 @@ class QuizDAO:
             return len(rows)
 
     def update_answer(self, question_id: int, user_name, answer_id):
-        sql = ''' UPDATE QUIZ SET answer_id=? WHERE 
+        sql = ''' UPDATE QUIZ SET answer_id=? WHERE
         question_id=? AND user_name=?'''
         with self._create_connection() as conn:
             cur = conn.cursor()

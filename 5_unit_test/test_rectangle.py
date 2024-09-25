@@ -9,6 +9,6 @@ class TestRectangle(TestCase):
         self.assertEqual(8, area)
 
     def test_perimetre(self):
-        rectangle2 = Rectangle(2,4)
+        rectangle2 = Rectangle(2, 4)
         perimetre = rectangle2.perimeter()
         self.assertEqual(12, perimetre)
