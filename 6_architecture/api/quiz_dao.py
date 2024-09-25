@@ -27,7 +27,7 @@ class QuizDAO:
         return conn
 
     def create_answer(self, question_id, user_name, answer_id):
-        sql = ''' INSERT INTO QUIZ (question_id, user_name, answer_id) 
+        sql = ''' INSERT INTO QUIZ (question_id, user_name, answer_id)
         VALUES(?,?,?) '''
         with self._create_connection() as conn:
             cur = conn.cursor()
@@ -44,7 +44,8 @@ class QuizDAO:
             return len(rows)
 
     def update_answer(self, question_id: int, user_name, answer_id):
-        sql = ''' UPDATE QUIZ SET answer_id=? WHERE question_id=? AND user_name=?'''
+        sql = ''' UPDATE QUIZ SET answer_id=? WHERE
+        question_id=? AND user_name=?'''
         with self._create_connection() as conn:
             cur = conn.cursor()
             cur.execute(sql, (answer_id, question_id, user_name))
